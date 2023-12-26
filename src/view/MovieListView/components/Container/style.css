@@ -1,0 +1,9 @@
+section.inner_content {
+  max-width: var(--maxPrimaryPageWidth);
+}
+section.inner_content.trending {
+  background-image: url("/images/trending-bg.svg");
+  background-position: 50% 200px;
+  background-size: var(--maxPrimaryPageWidth);
+  background-repeat: no-repeat;
+}
