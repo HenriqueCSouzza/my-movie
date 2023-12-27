@@ -9,16 +9,16 @@ export default function TrendingButton() {
   };
 
   return (
-    <div className="border-2 bg-tmdbLightBlue">
+    <div className="border border-tmdbDarkBlue">
       <button
         onClick={() => handleButtonClick("hoje")}
-        className={`px-4 py-2 rounded bg-indigo-500`}
+        className={`px-4 py-2 rounded `}
       >
         Hoje
       </button>
       <button
         onClick={() => handleButtonClick("semana")}
-        className={`px-4 py-2 rounded bg-slate-400`}
+        className={`px-4 py-2 rounded `}
       >
         Nesta Semana
       </button>

@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Sans&family=Source+Sans+3&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+:root {
+  --maxPrimaryPageWidth: 1400px;
+}
+a.k-menu-link {
+  padding: 3px 1.5rem;
+  padding-right: calc(3rem + 16px);
+}
