@@ -1,10 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Sans&family=Source+Sans+3&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Sans&family=Source+Sans+3&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #e6e6e6 transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;
+  border-radius: 4px;
 }
 :root {
   --maxPrimaryPageWidth: 1400px;
