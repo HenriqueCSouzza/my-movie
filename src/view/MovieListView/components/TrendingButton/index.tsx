@@ -1,29 +1,30 @@
 'use client'
-import { useState } from 'react'
+import { useContext } from 'react'
+import movieListContext from '../../context/MovieListContext'
 
 export default function TrendingButton() {
-  const [selectedButton, setSelectedButton] = useState<string>('')
+  const { timeWindow, setTimeWindow } = useContext(movieListContext)
 
   const selectBtn = 'bg-tmdbDarkBlue  text-lime-200'
 
-  const handleButtonClick = (buttonName: string) => {
-    setSelectedButton(buttonName)
+  const handleButtonClick = (buttonName: 'day' | 'week') => {
+    setTimeWindow(buttonName)
   }
 
   return (
     <div className="border border-tmdbDarkBlue bg-white rounded-3xl h-full">
       <button
-        onClick={() => handleButtonClick('hoje')}
+        onClick={() => handleButtonClick('day')}
         className={`px-5 py-1 rounded-3xl h-7 transition-colors duration-300 ${
-          selectedButton === 'hoje' ? selectBtn : ''
+          timeWindow === 'day' ? selectBtn : ''
         }`}
       >
         Hoje
       </button>
       <button
-        onClick={() => handleButtonClick('semana')}
+        onClick={() => handleButtonClick('week')}
         className={`px-5 py-1 rounded-3xl h-7 transition-colors duration-300 ${
-          selectedButton === 'semana' ? selectBtn : ''
+          timeWindow === 'week' ? selectBtn : ''
         }`}
       >
         Nesta Semana
